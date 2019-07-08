@@ -1,0 +1,132 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  height:100vh;
+  background:red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background:#163644 url(img/bg.jpg);
+  background-blend-mode: multiply;
+  background-size:cover;
+  background-position:center;
+}
+
+header h1 {
+    font-size: 37px;
+    text-transform: uppercase;
+    margin: 10px 0;
+    color: white;
+    font-family: "Roboto Thin", sans-serif;
+    letter-spacing: 16px;
+    margin-right: -16px;
+}
+
+header h1::first-letter {
+	color:#FFC107;
+}
+
+nav {
+  position:fixed;
+  width:100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding:24px;
+}
+
+nav ul li {
+  margin: 0 32px;
+}
+
+nav ul li a {
+  color:#5dfff0;
+  font-size:28px;
+  text-decoration: none;
+  transition: font-size 0.2s, color 1s;
+}
+
+nav ul li a:hover {
+  color:white;
+  font-size:32px;
+}
+
+
+
+.menu-icon,
+.close-icon {
+  z-index: 100;
+  color:white;
+  position: fixed;
+  right:24px;
+  top:10px;
+  opacity:0;
+  font-size:26px;
+  padding:4px;
+  pointer-events: none;
+  cursor: pointer;
+  transition:all .5s;
+}
+
+.menu-icon.active,
+.close-icon.active {
+  opacity:1;
+  top:24px;
+  pointer-events: auto;
+}
+
+
+/* Main Menu */
+
+.main-menu {
+  background:#009688;
+  height:100vh;
+  top:100vh;
+  transition: all 0.4s;
+}
+
+.main-menu ul {
+  display: flex;
+  height:100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-menu.active {
+  top:0;
+}
+
+.main-menu.active ul li {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.main-menu ul li {
+  margin: 24px 0;
+  transform: translateY(100px);
+  opacity:0;
+  transition: all 1s;
+}
+
+.main-menu ul li a {
+  color:white;
+  font-size:32px;
+  text-decoration: none;
+  transition: all 0s;
+}
+
+.main-menu ul li a:hover {
+  color:black;
+}
